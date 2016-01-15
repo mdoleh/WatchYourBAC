@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>Jasmine Tests</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/jasmine.css">
+  <script src="https://rawgithub.com/systemjs/systemjs/0.19.6/dist/system.js"></script>
+  <script src="https://code.angularjs.org/tools/typescript.js"></script>
+  <script src="https://code.angularjs.org/2.0.0-beta.0/angular2-polyfills.js"></script>
+  <script src="https://code.angularjs.org/2.0.0-beta.0/Rx.js"></script>
+  <script src="https://code.angularjs.org/2.0.0-beta.0/angular2.dev.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/jasmine.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/jasmine-html.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/boot.js"></script>
+</head>
+<body>
+  <script type="text/javascript">
+    System.config({
+      transpiler: 'typescript', 
+      typescriptOptions: { emitDecoratorMetadata: true }, 
+      packages: {
+		'test': {defaultExtension: 'ts'},
+		'src': {defaultExtension: 'ts'}
+	  }
+    });
+  
+    Promise.all([
+      //System.import('src/AppSpec'),
+      System.import('test/BacServiceSpec')
+    ])
+    .then(window.onload)
+    .catch(console.error.bind(console));
+  </script>
+</body>
+</html>
