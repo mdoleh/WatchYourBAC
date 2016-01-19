@@ -1,7 +1,6 @@
 import {Component} from 'angular2/core';
 import {BeerService} from 'src/BeerService';
 import {API_RESPONSE_TEMPLATE} from 'src/Constants';
-import {HTTP_PROVIDERS} from 'angular2/http';
 
 @Component({
   selector: "app",
@@ -19,11 +18,7 @@ import {HTTP_PROVIDERS} from 'angular2/http';
       </ul>
     </div>
   `,
-  // putting HTTP_PROVIDERS here doesn't seem right
-  // Http is only required by the service so why
-  // should the dependencies be injected here?
-  // look into finding an alternate place for it
-  providers: [BeerService, HTTP_PROVIDERS]
+  providers: [BeerService]
 })
 export class App implements OnInit {
   constructor(private _beerService : BeerService){}

@@ -23,12 +23,12 @@
 
     <!-- 3. Bootstrap -->
     <script>
-      // can supposidly inject HTTP_PROVIDERS here to solve the injecting problem
-      // may need to move this to a separate file to do it though
       System.import('angular2/platform/browser').then(function(ng){
-        System.import('src/App').then(function(src) {
-          ng.bootstrap(src.App);
-        });
+		System.import('angular2/http').then(function(http) {
+			System.import('src/App').then(function(src) {
+			  ng.bootstrap(src.App, [http.HTTP_PROVIDERS]);
+			});
+		});
       });
     </script>
 
