@@ -5,31 +5,27 @@
     <title>Watch Your BAC</title>
 
     <!-- 1. Load libraries -->
-    <script src="https://rawgithub.com/systemjs/systemjs/0.19.6/dist/system.js"></script>
-    <script src="https://code.angularjs.org/tools/typescript.js"></script>
-    <script src="https://code.angularjs.org/2.0.0-beta.0/angular2-polyfills.js"></script>
-    <script src="https://code.angularjs.org/2.0.0-beta.0/Rx.js"></script>
-    <script src="https://code.angularjs.org/2.0.0-beta.0/angular2.dev.js"></script>
-    <script src="https://code.angularjs.org/2.0.0-beta.0/http.dev.js"></script>
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+	<script src="https://code.angularjs.org/2.0.0-beta.0/http.dev.js"></script>
 
     <!-- 2. Configure SystemJS -->
     <script>
       System.config({
-        transpiler: 'typescript', 
-        typescriptOptions: { emitDecoratorMetadata: true }, 
-        packages: {'src': {defaultExtension: 'ts'}} 
+        packages: {
+			src: {
+					format: 'register',
+					defaultExtension: 'js'
+				}
+			} 
       });
     </script>
 
     <!-- 3. Bootstrap -->
     <script>
-      System.import('angular2/platform/browser').then(function(ng){
-		System.import('angular2/http').then(function(http) {
-			System.import('src/App').then(function(src) {
-			  ng.bootstrap(src.App, [http.HTTP_PROVIDERS]);
-			});
-		});
-      });
+      System.import('src/boot').then(null, console.error.bind(console));
     </script>
 
   </head>

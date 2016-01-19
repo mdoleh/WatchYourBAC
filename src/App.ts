@@ -28,7 +28,6 @@ export class App implements OnInit {
     this._beerService.searchByName("bud*")
       .subscribe(res => {
         this.beers = res.json().data;
-      });
     });
-  }
+  };
 }
