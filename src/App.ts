@@ -1,6 +1,6 @@
 import {Component} from 'angular2/core';
-import {BeerService} from 'src/BeerService';
-import {API_RESPONSE_TEMPLATE} from 'src/Constants';
+import {BeerService} from './BeerService';
+import {API_RESPONSE_TEMPLATE} from './Constants';
 
 @Component({
   selector: "app",
@@ -23,7 +23,7 @@ import {API_RESPONSE_TEMPLATE} from 'src/Constants';
 export class App implements OnInit {
   constructor(private _beerService : BeerService){}
   name : string = "WatchYourBAC";
-  beers : array = [API_RESPONSE_TEMPLATE];
+  beers = [API_RESPONSE_TEMPLATE];
   ngOnInit() {
     this._beerService.searchByName("bud*")
       .subscribe(res => {
