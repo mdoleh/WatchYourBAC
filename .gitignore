@@ -78,6 +78,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-#Compile js and js.map files
+#Compiled js and js.map files
 *.js
 *.js.map

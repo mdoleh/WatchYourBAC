@@ -23,7 +23,7 @@
     });
   
     Promise.all([
-      //System.import('src/AppSpec'),
+      System.import('test/AppSpec'),
       System.import('test/BacServiceSpec')
     ])
     .then(window.onload)
