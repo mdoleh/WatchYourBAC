@@ -5,7 +5,7 @@ System.register([], function(exports_1) {
         execute: function() {
             // we will eventually want this to point here:
             // xhr object will not allow requests from the client outside its domain
-            // http://api.brewerydb.com/v2/
+            // http://api.brewerydb.com/v2/beers
             exports_1("API_URL", API_URL = "testData.json");
             exports_1("API_KEY", API_KEY = "");
             // apparently the template will try to render and

@@ -1,4 +1,4 @@
-import {BacService} from 'src/BacService';
+import {BacService} from '../src/BacService';
 
 describe("BacService", () => {
   let bacService : BacService;

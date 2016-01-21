@@ -1,10 +1,10 @@
-import {App} from 'src/App';
+import {AppComponent} from '../src/AppComponent';
 
 describe("App", () => {
-  let appComponent : App;
+  let appComponent : AppComponent;
   
   beforeEach(() => {
-    appComponent = new App();
+    appComponent = new AppComponent({});
   });
   
   it("should have a name property initialized", () => {

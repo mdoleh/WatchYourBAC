@@ -1,4 +1,4 @@
-System.register(['src/BacService'], function(exports_1) {
+System.register(['../src/BacService'], function(exports_1) {
     var BacService_1;
     return {
         setters:[

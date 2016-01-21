@@ -1,33 +1,35 @@
-import {Component} from 'angular2/core';
+import {Component, OnInit} from 'angular2/core';
 import {BeerService} from './BeerService';
 import {API_RESPONSE_TEMPLATE} from './Constants';
+import {Router} from 'angular2/router';
 
 @Component({
   selector: "app",
-  styles: ['.api-data {color: blue}'],
+  styles: ['h1 {color: red}'],
   template: `
-    <label>Name:</label>
-    <input type="text" [(ngModel)]="name" placeholder="Enter a name here">
-    <hr>
-    <h1 [hidden]="!name">Hello {{name}}!</h1>
-    <hr><br />
+    <h1>Beer Search</h1> <br />
     This data came from an API: 
     <div *ngFor="#beer of beers" class="api-data">
       <ul>
-        <li>{{beer.nameDisplay}}</li>
+        <li (click)="beerSelected(beer.id)">{{beer.nameDisplay}}</li>
       </ul>
     </div>
   `,
   providers: [BeerService]
 })
-export class App implements OnInit {
-  constructor(private _beerService : BeerService){}
-  name : string = "WatchYourBAC";
+export class SearchComponent implements OnInit {
+  constructor(
+      private _beerService : BeerService,
+      private _router: Router
+  ){}
   beers = [API_RESPONSE_TEMPLATE];
   ngOnInit() {
     this._beerService.searchByName("bud*")
       .subscribe(res => {
         this.beers = res.json().data;
     });
-  };
+  }
+  beerSelected(id: number) {
+      this._router.navigate(['BeerDetails', {id: id}]);
+  }
 }
