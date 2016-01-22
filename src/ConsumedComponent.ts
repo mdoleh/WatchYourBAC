@@ -1,4 +1,5 @@
 import {Component} from 'angular2/core';
+import {BacService} from './BacService';
 
 @Component({
   selector: "app",
@@ -9,5 +10,9 @@ import {Component} from 'angular2/core';
   providers: []
 })
 export class ConsumedComponent {
-  constructor(){}
+  constructor(private _bacService : BacService){
+      // the data we need is stored in the state of the service
+      // just need to provide the oz of alcohol consumed
+      console.log("BacService State:" + JSON.stringify(_bacService.getState()));
+  }
 }
