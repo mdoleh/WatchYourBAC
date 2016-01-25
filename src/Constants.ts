@@ -1,7 +1,7 @@
 // we will eventually want this to point here:
 // xhr object will not allow requests from the client outside its domain
 // http://api.brewerydb.com/v2/beers
-export const API_URL = "testData.json";
+export const API_URL = "http://localhost:8080/";
 export const API_KEY = "";
 
 // apparently the template will try to render and

@@ -24,7 +24,7 @@ export class SearchComponent implements OnInit {
   ){}
   beers = [API_RESPONSE_TEMPLATE];
   ngOnInit() {
-    this._beerService.searchByName("bud*")
+    this._beerService.searchByName("par*")
       .subscribe(res => {
         this.beers = res.json().data;
     });

@@ -5,7 +5,10 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "lite-server",
-    "start": "concurrent \"npm run tsc:w\" \"npm run lite\" "
+    "server": "node server",
+    "nodemon": "nodemon server",
+    "start-old": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
+    "start": "concurrent \"npm run tsc:w\" \"npm run nodemon\" "
   },
   "license": "ISC",
   "dependencies": {
@@ -20,6 +23,9 @@
   "devDependencies": {
     "concurrently": "^1.0.0",
     "lite-server": "^1.3.1",
-    "typescript": "^1.7.3"
+    "typescript": "^1.7.3",
+    "express": "^4.13.4",
+    "request": "^2.67.0",
+    "nodemon": "^1.8.1"
   }
 }

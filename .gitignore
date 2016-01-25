@@ -80,4 +80,5 @@ $RECYCLE.BIN/
 
 #Compiled js and js.map files
 *.js
+!server.js
 *.js.map
