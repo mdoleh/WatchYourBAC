@@ -8,7 +8,7 @@
     "server": "node server",
     "nodemon": "nodemon server",
     "start-old": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
-    "start": "concurrent \"npm run tsc:w\" \"npm run nodemon\" "
+    "start": "concurrent \"npm run tsc:w\" \"npm run nodemon ./server.js\" "
   },
   "license": "ISC",
   "dependencies": {
