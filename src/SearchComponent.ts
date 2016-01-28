@@ -8,7 +8,7 @@ import {Router} from 'angular2/router';
   styles: ['h1 {color: red}'],
   template: `
     <h1>Beer Search</h1> <br />
-    This data came from an API: 
+    Search: <input #beerItem (keyup)="onKey(beerItem.value)" />
     <div *ngFor="#beer of beers" class="api-data">
       <ul>
         <li (click)="beerSelected(beer.id)">{{beer.nameDisplay}}</li>
@@ -23,12 +23,23 @@ export class SearchComponent implements OnInit {
       private _router: Router
   ){}
   beers = [API_RESPONSE_TEMPLATE];
+  
   ngOnInit() {
-    this._beerService.searchByName("par*")
-      .subscribe(res => {
-        this.beers = res.json().data;
-    });
+      this.beers = []; // this might not be necessary
+      // we should also clear the search bar
   }
+
+    onKey(value : string) {
+        if (value) {
+            this._beerService.searchByName(value + "*")
+            .subscribe(res => {
+                this.beers = res.json().data;
+            });
+        } else {
+            this.beers = [];
+        }
+    }
+    
   beerSelected(id: number) {
       this._router.navigate(['BeerDetails', {id: id}]);
   }
