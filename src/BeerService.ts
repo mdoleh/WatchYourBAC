@@ -13,8 +13,8 @@ export class BeerService {
     return this._http.get(API_URL + "?key=" + API_KEY);
   }
   // wildcard searching is allowed through the use of *
-  searchByName(beerName : string){
-    let urlParams : string = "beerByName/?name=" + beerName;
+  searchByName(beerName : string, pageNumber : number = 1){
+    let urlParams : string = "beerByName/?name=" + beerName + "*&page=" + pageNumber;
     return this._http.get(API_URL + urlParams);
   }
   searchById(beerId : string){

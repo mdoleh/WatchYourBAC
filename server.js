@@ -13,9 +13,20 @@ app.get(['/', '/search', '/beer/*', '/consumed'], function (req, res){
     res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 
+app.get('/testData/beerByName', function(req, res){
+    console.log("Sending testData!");
+    res.sendFile(path.resolve(__dirname, 'testData.json'));
+});
+
+app.get('/testData/beerById', function(req, res){
+    console.log("Sending testDataSingleBeer!");
+    res.sendFile(path.resolve(__dirname, 'testDataSingleBeer.json'));
+});
+
 app.get('/beerByName', function (req, res) {
     var beerName = req.query.name;
-    var queryString = "beers/?name=" + beerName + "&key=" + API_KEY;
+    var pageNumber = req.query.page;
+    var queryString = "beers/?name=" + beerName + "&p=" + pageNumber + "&key=" + API_KEY;
     console.log(API_URL + queryString);
     request(API_URL + queryString, function (error, response, body) {
         if (!error && response.statusCode == 200) {
