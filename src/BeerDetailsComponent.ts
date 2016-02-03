@@ -29,7 +29,7 @@ export class BeerDetailsComponent implements OnInit {
     // service call to get beer by id and use results in template
     this._beerService.searchById(this.beerId)
     .subscribe(res => {
-        this.beer = res.json();
+        this.beer = res.json().data;
     });
   }
 }
