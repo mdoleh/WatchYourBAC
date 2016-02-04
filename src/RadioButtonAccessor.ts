@@ -32,7 +32,8 @@ export class RadioControlValueAccessor implements ControlValueAccessor {
     constructor(private _renderer: Renderer, private _elementRef: ElementRef) {}
 
     writeValue(value: any): void {
-        this._renderer.setElementProperty(this._elementRef, 'checked', value == this._elementRef.nativeElement.value);
+        if (!value || value != this._elementRef.nativeElement.value) return;
+        this._renderer.setElementAttribute(this._elementRef.nativeElement, 'checked', (value == this._elementRef.nativeElement.value).toString());
     }
     registerOnChange(fn: (_: any) => {}): void { this.onChange = fn; }
     registerOnTouched(fn: () => {}): void { this.onTouched = fn; }

@@ -1,5 +1,6 @@
 import {Component} from 'angular2/core';
 import {BacService} from './BacService';
+import {SerializerService} from './SerializerService';
 import {Router} from 'angular2/router';
 import {FORM_DIRECTIVES} from 'angular2/common';
 import {RadioControlValueAccessor} from './RadioButtonAccessor';
@@ -14,7 +15,7 @@ import {Person} from './Person';
         <input type="radio" name="gender" [(ngModel)]="model.gender" value="Male" />Male
     </div>
     <div>
-        <input checked="true" type="radio" name="gender" [(ngModel)]="model.gender" value="Female" />Female
+        <input type="radio" name="gender" [(ngModel)]="model.gender" value="Female" />Female
     </div>
     <div>
         Body Weight: <input type="text" [(ngModel)]="model.bodyWeight" />
@@ -24,7 +25,8 @@ import {Person} from './Person';
     </div>
     <input (click)="nextPage()" type="button" value="Next"/>
   `,
-  directives: [FORM_DIRECTIVES, RadioControlValueAccessor]
+  directives: [FORM_DIRECTIVES, RadioControlValueAccessor],
+  providers: [BacService, SerializerService]
 })
 export class HomeComponent {
     private model : Person;
