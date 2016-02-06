@@ -14,6 +14,7 @@ import {ConsumedService} from './ConsumedService';
     <div async>Name: {{beer.nameDisplay}}</div>
     <div>Description: {{beer.description}}</div>
     <div>Alcohol by Volume: {{beer.abv}}</div>
+    <input type="button" (click)="goBack()" value="< Back" />
 	<input (click)="addBeer()" type="button" value="Add Beer" />
   `,
   providers: [BeerService, SerializerService, ConsumedService]
@@ -41,6 +42,10 @@ export class BeerDetailsComponent implements OnInit {
   
   addBeer() {
 	this._consumedService.addBeer(this.beer);
+	this._router.navigate(['BeerSearch']);
+  }
+  
+  goBack() {
 	this._router.navigate(['BeerSearch']);
   }
 }
