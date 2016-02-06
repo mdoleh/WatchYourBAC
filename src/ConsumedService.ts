@@ -8,12 +8,12 @@ export class ConsumedService {
     
 	constructor(private _serializerService : SerializerService) {}
 
-	addBeer(beer : Beer) {
+	addBeer(beer : Beer, quantity : number = 1) {
 		this.restoreConsumedData();
-		beer.quantity = 1;
+		beer.quantity = quantity;
 		let index = this.getIndex(beer);
 		if (index > -1) {
-			beer.quantity += 1;
+			beer.quantity += quantity;
 			this.removeBeer(beer, index);
 		}
 		this._beers.push(beer);

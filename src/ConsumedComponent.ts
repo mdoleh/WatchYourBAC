@@ -4,6 +4,7 @@ import {SerializerService} from './SerializerService';
 import {ConsumedService} from './ConsumedService';
 import {Beer} from './ApiReturnTypes';
 import {Router} from 'angular2/router';
+import {QuantityComponent} from './QuantityComponent';
 
 @Component({
   selector: "app",
@@ -12,16 +13,13 @@ import {Router} from 'angular2/router';
     <h1>Beers Consumed</h1>
 	<ul *ngFor="#beer of consumedBeers">
 		<li>{{beer.nameDisplay}}
-			<div>
-				Quantity: <input maxlength="2" [(ngModel)]="beer.quantity" type="text" />
-				<input type="button" (click)="updateQuantity(beer)" value="Update" />
-				<input type="button" (click)="removeBeer(beer)" value="Remove" />
-			</div>
+			<quantity-controls [(quantityModel)]="beer.quantity" (updateQuantity)="updateQuantity(beer)" (removeItem)="removeBeer(beer)"></quantity-controls>
 		</li>
 	</ul>
 	<input type="button" (click)="goBack()" value="< Back" />
   `,
-  providers: [BacService, SerializerService, ConsumedService]
+  providers: [BacService, SerializerService, ConsumedService],
+  directives: [QuantityComponent]
 })
 export class ConsumedComponent implements OnInit {
   constructor(private _bacService : BacService, 
