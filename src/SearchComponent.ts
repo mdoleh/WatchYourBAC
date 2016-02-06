@@ -14,11 +14,9 @@ import {SearchButtonsComponent} from './SearchButtonsComponent';
     <input (click)="reset()" type="button" value="Clear" />
     <search-buttons (previousPage)="previousPage(beerName, rawResponse.currentPage)" (nextPage)="nextPage(beerName, rawResponse.currentPage)" [shouldDisableNext]="!canPageForward()" [shouldDisablePrevious]="!canPageBackward()"></search-buttons>
     <div *ngIf="rawResponse.numberOfPages">Viewing page {{rawResponse.currentPage}} of {{rawResponse.numberOfPages}}</div>
-    <div *ngFor="#beer of beers" class="api-data">
-      <ul>
-        <li (click)="beerSelected(beer.id)">{{beer.nameDisplay}}</li>
-      </ul>
-    </div>
+    <ul *ngFor="#beer of beers" class="api-data">
+      <li (click)="beerSelected(beer.id)">{{beer.nameDisplay}}</li>
+    </ul>
     <search-buttons *ngIf="rawResponse.numberOfPages" (previousPage)="previousPage(beerName, rawResponse.currentPage)" (nextPage)="nextPage(beerName, rawResponse.currentPage)" [shouldDisableNext]="!canPageForward()" [shouldDisablePrevious]="!canPageBackward()"></search-buttons>
   `,
   providers: [BeerService],

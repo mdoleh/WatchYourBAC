@@ -66,12 +66,13 @@ export class Beer {
     updateDate: string;
     glass: Glass;
     style: Style;
-    availableId?: number;
+    availableId: number;
     available: Available;
-    srmId?: number;
+    srmId: number;
     srm: Srm;
     servingTemperature: string;
     servingTemperatureDisplay: string;
+	quantity: number;
 }
 
 export class RawResponse {

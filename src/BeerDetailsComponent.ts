@@ -1,7 +1,9 @@
 import {Component, OnInit} from 'angular2/core';
-import {RouteParams} from 'angular2/router';
+import {RouteParams, Router} from 'angular2/router';
 import {BeerService} from './BeerService';
 import {Beer} from './ApiReturnTypes';
+import {SerializerService} from './SerializerService';
+import {ConsumedService} from './ConsumedService';
 
 @Component({
   selector: "app",
@@ -12,16 +14,20 @@ import {Beer} from './ApiReturnTypes';
     <div async>Name: {{beer.nameDisplay}}</div>
     <div>Description: {{beer.description}}</div>
     <div>Alcohol by Volume: {{beer.abv}}</div>
+	<input (click)="addBeer()" type="button" value="Add Beer" />
   `,
-  providers: [BeerService]
+  providers: [BeerService, SerializerService, ConsumedService]
 })
 export class BeerDetailsComponent implements OnInit {
   private beerId : string;
     
   constructor(
       private _beerService : BeerService,
-      routeParams: RouteParams){
-      this.beerId = routeParams.get("id")
+	  private _consumedService : ConsumedService,
+	  private _router: Router,
+      routeParams: RouteParams)
+  {
+      this.beerId = routeParams.get("id");
   }
   beer = new Beer();
   
@@ -31,5 +37,10 @@ export class BeerDetailsComponent implements OnInit {
     .subscribe(res => {
         this.beer = res.json().data;
     });
+  }
+  
+  addBeer() {
+	this._consumedService.addBeer(this.beer);
+	this._router.navigate(['BeerSearch']);
   }
 }
