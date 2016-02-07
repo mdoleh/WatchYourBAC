@@ -9,26 +9,26 @@ export class ConsumedService {
 	constructor(private _serializerService : SerializerService) {}
 
 	addBeer(beer : Beer, quantity : number = 1) {
-		this.restoreConsumedData();
+		this.getState();
 		beer.quantity = quantity;
 		let index = this.getIndex(beer);
 		if (index > -1) {
-			beer.quantity += quantity;
-			this.removeBeer(beer, index);
+			this._beers[index].quantity += quantity;
+		} else {
+			this._beers.push(beer);
 		}
-		this._beers.push(beer);
 		this._serializerService.storeData("ConsumedInfo", this._beers);
 	}
 
 	removeBeer(beer : Beer, index?: number) {
-		this.restoreConsumedData();
-		this._beers.splice(index ? index : this.getIndex(beer), 1);
+		this.getState();
+		this._beers.splice(index != null ? index : this.getIndex(beer), 1);
 		this._serializerService.storeData("ConsumedInfo", this._beers);
 	}
 	
 	updateQuantity(beer : Beer, quantity : number) {
-		this.restoreConsumedData();
-		let index = this._beers.map(b => b.id).indexOf(beer.id);
+		this.getState();
+		let index = this.getIndex(beer);
 		if (quantity <= 0) this.removeBeer(beer, index);
 		else this._beers[index].quantity = quantity;
 		this._serializerService.storeData("ConsumedInfo", this._beers);

@@ -3,10 +3,25 @@ import {Person} from '../src/Person';
 
 describe("BacService", () => {
   let bacService : BacService;
+  let mockSerializer;
   
   beforeEach(() => {
-    bacService = new BacService();
-    // oz drank, body weight, genderIsMale, hours drinking
+	mockSerializer = jasmine.createSpyObj("SerializerService", ["getData", "storeData"]);
+    bacService = new BacService(mockSerializer);
+  });
+  
+  it("should call getData on SerializerService when calculating BAC if person data not initialized", () => {
+	bacService.init(null);
+	mockSerializer.getData = jasmine.createSpy("getData").and.returnValue({bodyWeight: 0, gender: "", hoursDrinking: 0});
+	bacService.calcBAC(0);
+	expect(mockSerializer.getData).toHaveBeenCalledWith("UserInfo");
+  });
+  
+  it("should call getData on SerializerService on getState if person data not initialized", () => {
+	bacService.init(null);
+	mockSerializer.getData = jasmine.createSpy("getData").and.returnValue({bodyWeight: 0, gender: "", hoursDrinking: 0});
+	bacService.getState();
+	expect(mockSerializer.getData).toHaveBeenCalledWith("UserInfo");
   });
   
   it("BAC should be zero with no alcohol consumed", () => {

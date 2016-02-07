@@ -30,7 +30,10 @@
   
 		Promise.all([
 		  System.import('test/AppSpec'),
-		  System.import('test/BacServiceSpec')
+		  System.import('test/BacServiceSpec'), 
+		  System.import('test/SerializerServiceSpec'),
+		  System.import('test/BeerServiceSpec'),
+		  System.import('test/ConsumedServiceSpec')
 		])
 		.then(window.onload)
 		.catch(console.error.bind(console));
