@@ -12,7 +12,7 @@ import {QuantityComponent} from './QuantityComponent';
   template: `
     <h1>Beers Consumed</h1>
 	<ul *ngFor="#beer of consumedBeers">
-		<li>{{beer.nameDisplay}}
+		<li>{{beer.nameDisplay}} {{beer.size}}oz
 			<quantity-controls [(quantityModel)]="beer.quantity" (updateQuantity)="updateQuantity(beer)" (removeItem)="removeBeer(beer)"></quantity-controls>
 		</li>
 	</ul>

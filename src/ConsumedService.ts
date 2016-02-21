@@ -10,10 +10,13 @@ export class ConsumedService {
 
 	addBeer(beer : Beer, quantity : number = 1) {
 		this.getState();
+        beer.id += beer.size;
 		beer.quantity = quantity;
 		let index = this.getIndex(beer);
 		if (index > -1) {
-			this._beers[index].quantity += quantity;
+            // for some reason quantity may be a string (serialization/input issue?)
+            // so we need to parseInt to make sure adding works correctly
+			this._beers[index].quantity = parseInt(this._beers[index].quantity.toString()) + quantity;
 		} else {
 			this._beers.push(beer);
 		}

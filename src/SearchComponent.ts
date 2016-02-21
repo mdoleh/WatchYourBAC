@@ -10,7 +10,7 @@ import {SearchButtonsComponent} from './SearchButtonsComponent';
   template: `
     <h1>Beer Search</h1> <br />
     Search: <input [(ngModel)]="beerName"/>
-    <input (click)="search(beerName)" type="button" value="Search" />
+    <input (click)="search(beerName)" type="button" value="Search" [disabled]="!canSearch(beerName)" />
     <input (click)="reset()" type="button" value="Clear" />
     <search-buttons (previousPage)="previousPage(beerName, rawResponse.currentPage)" (nextPage)="nextPage(beerName, rawResponse.currentPage)" [shouldDisableNext]="!canPageForward()" [shouldDisablePrevious]="!canPageBackward()"></search-buttons>
     <div *ngIf="rawResponse.numberOfPages">Viewing page {{rawResponse.currentPage}} of {{rawResponse.numberOfPages}}</div>
@@ -24,9 +24,10 @@ import {SearchButtonsComponent} from './SearchButtonsComponent';
 })
 export class SearchComponent implements OnInit {
     private beerName : string;
+    private shouldDisplayNotFound : boolean;
     beers : Beer[];
     rawResponse : RawResponse = new RawResponse();
-    callComplete : boolean = false;
+    callComplete : boolean = true;
     
     constructor(
         private _beerService : BeerService,
@@ -76,6 +77,11 @@ export class SearchComponent implements OnInit {
     
     private canPageBackward() {
         return this.rawResponse.currentPage > 1 && this.callComplete;
+    }
+    
+    private canSearch(beerName : string)
+    {
+        return this.callComplete && beerName !== "";
     }
     
     beerSelected(id: number) {

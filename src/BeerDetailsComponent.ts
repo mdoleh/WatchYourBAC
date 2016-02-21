@@ -5,6 +5,7 @@ import {Beer} from './ApiReturnTypes';
 import {SerializerService} from './SerializerService';
 import {ConsumedService} from './ConsumedService';
 import {QuantityComponent} from './QuantityComponent';
+import {RadioControlValueAccessor} from './RadioButtonAccessor';
 
 @Component({
   selector: "app",
@@ -16,11 +17,15 @@ import {QuantityComponent} from './QuantityComponent';
     <div>Description: {{beer.description}}</div>
     <div>Alcohol by Volume: {{beer.abv}}</div>
 	<quantity-controls [(quantityModel)]="beer.quantity" shouldHideUpdate="true" shouldHideRemove="true"></quantity-controls>
+    <div>
+        <input id="bottle/pint" type="radio" name="beerSize" [(ngModel)]="beer.size" value="16" /><label for="bottle/pint">Bottle/Pint</label>
+        <input id="can" type="radio" name="beerSize" [(ngModel)]="beer.size" value="12" /><label for="can">Can</label>
+    </div>
     <input type="button" (click)="goBack()" value="< Back" />
 	<input (click)="addBeer()" type="button" value="Add Beer" />
   `,
   providers: [BeerService, SerializerService, ConsumedService],
-  directives: [QuantityComponent]
+  directives: [QuantityComponent, RadioControlValueAccessor]
 })
 export class BeerDetailsComponent implements OnInit {
   private beerId : string;
@@ -33,7 +38,7 @@ export class BeerDetailsComponent implements OnInit {
   {
       this.beerId = routeParams.get("id");
   }
-  beer = new Beer();
+  private beer = new Beer();
   
   ngOnInit() {
     // service call to get beer by id and use results in template
@@ -41,11 +46,12 @@ export class BeerDetailsComponent implements OnInit {
     .subscribe(res => {
         this.beer = res.json().data;
 		this.beer.quantity = 1;
+        this.beer.size = "16";
     });
   }
   
   addBeer() {
-	this._consumedService.addBeer(this.beer, this.beer.quantity);
+    this._consumedService.addBeer(this.beer, this.beer.quantity);
 	this._router.navigate(['BeerSearch']);
   }
   

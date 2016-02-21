@@ -12,10 +12,10 @@ import {Person} from './Person';
   template: `
     <h1>Fill out your information</h1>
     <div>
-        <input type="radio" name="gender" [(ngModel)]="model.gender" value="Male" />Male
+        <input id="male" type="radio" name="gender" [(ngModel)]="model.gender" value="Male" /><label for="male">Male</label>
     </div>
     <div>
-        <input type="radio" name="gender" [(ngModel)]="model.gender" value="Female" />Female
+        <input id="female" type="radio" name="gender" [(ngModel)]="model.gender" value="Female" /><label for="female">Female</label>
     </div>
     <div>
         Body Weight: <input type="text" [(ngModel)]="model.bodyWeight" />

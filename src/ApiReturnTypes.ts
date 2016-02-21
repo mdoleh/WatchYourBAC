@@ -73,6 +73,7 @@ export class Beer {
     servingTemperature: string;
     servingTemperatureDisplay: string;
 	quantity: number;
+    size: string;
 }
 
 export class RawResponse {
