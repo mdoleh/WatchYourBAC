@@ -3,6 +3,7 @@ import {BeerService} from './BeerService';
 import {Router} from 'angular2/router';
 import {RawResponse, Beer} from './ApiReturnTypes';
 import {SearchButtonsComponent} from './SearchButtonsComponent';
+import {SerializerService} from './SerializerService';
 
 @Component({
   selector: "app",
@@ -19,7 +20,7 @@ import {SearchButtonsComponent} from './SearchButtonsComponent';
     </ul>
     <search-buttons *ngIf="rawResponse.numberOfPages" (previousPage)="previousPage(beerName, rawResponse.currentPage)" (nextPage)="nextPage(beerName, rawResponse.currentPage)" [shouldDisableNext]="!canPageForward()" [shouldDisablePrevious]="!canPageBackward()"></search-buttons>
   `,
-  providers: [BeerService],
+  providers: [BeerService, SerializerService],
   directives: [SearchButtonsComponent]
 })
 export class SearchComponent implements OnInit {
@@ -31,6 +32,7 @@ export class SearchComponent implements OnInit {
     
     constructor(
         private _beerService : BeerService,
+        private _serializerService : SerializerService,
         private _router: Router
     ){}
   
@@ -63,6 +65,7 @@ export class SearchComponent implements OnInit {
     
     private searchBeer(beerName : string, pageNumber : number = 1) {
         this.callComplete = false;
+        this._serializerService.storeStringData("LastSearchTerm", beerName);
         this._beerService.searchByName(beerName, pageNumber)
         .subscribe(res => {
             this.rawResponse = res.json();
