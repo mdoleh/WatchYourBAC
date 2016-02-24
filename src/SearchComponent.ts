@@ -1,6 +1,6 @@
-import {Component, OnInit} from 'angular2/core';
+import {Component} from 'angular2/core';
 import {BeerService} from './BeerService';
-import {Router} from 'angular2/router';
+import {Router, RouteParams} from 'angular2/router';
 import {RawResponse, Beer} from './ApiReturnTypes';
 import {SearchButtonsComponent} from './SearchButtonsComponent';
 import {SerializerService} from './SerializerService';
@@ -23,7 +23,7 @@ import {SerializerService} from './SerializerService';
   providers: [BeerService, SerializerService],
   directives: [SearchButtonsComponent]
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent {
     private beerName : string;
     private shouldDisplayNotFound : boolean;
     beers : Beer[];
@@ -33,11 +33,11 @@ export class SearchComponent implements OnInit {
     constructor(
         private _beerService : BeerService,
         private _serializerService : SerializerService,
-        private _router: Router
-    ){}
-  
-    ngOnInit() {
-        this.reset();
+        private _router: Router,
+        routeParams: RouteParams
+    ){
+        this.beerName = routeParams.get("id");
+        this.search(this.beerName);
     }
 
     search(value : string) {
