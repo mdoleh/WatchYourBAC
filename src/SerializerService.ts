@@ -6,11 +6,7 @@ export class SerializerService {
   
   storeData(key : string, value : Object) {
       var stringified = JSON.stringify(value);
-      this.storeStringData(key, stringified);
-  }
-  
-  storeStringData(key : string, value : string) {
-      sessionStorage.setItem(key, value);
+      sessionStorage.setItem(key, stringified);
   }
   
   getData(key : string) {
