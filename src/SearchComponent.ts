@@ -37,6 +37,7 @@ export class SearchComponent {
         routeParams: RouteParams
     ){
         this.beerName = routeParams.get("id");
+        if (!this.beerName) this.beerName = _serializerService.getData("LastSearchTerm");
         this.search(this.beerName);
     }
 
@@ -65,7 +66,7 @@ export class SearchComponent {
     
     private searchBeer(beerName : string, pageNumber : number = 1) {
         this.callComplete = false;
-        this._serializerService.storeStringData("LastSearchTerm", beerName);
+        this._serializerService.storeData("LastSearchTerm", beerName);
         this._beerService.searchByName(beerName, pageNumber)
         .subscribe(res => {
             this.rawResponse = res.json();
