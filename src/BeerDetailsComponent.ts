@@ -15,7 +15,7 @@ import {RadioControlValueAccessor} from './RadioButtonAccessor';
     <div>beer ID: {{beerId}}</div>
     <div async>Name: {{beer.nameDisplay}}</div>
     <div>Description: {{beer.description}}</div>
-    <div>Alcohol by Volume: {{beer.abv}}</div>
+    <div>Alcohol by Volume: {{beer.abv}}%</div>
 	<quantity-controls [(quantityModel)]="beer.quantity" shouldHideUpdate="true" shouldHideRemove="true"></quantity-controls>
     <div>
         <input id="bottle/pint" type="radio" name="beerSize" [(ngModel)]="beer.size" value="16" /><label for="bottle/pint">Bottle/Pint</label>
