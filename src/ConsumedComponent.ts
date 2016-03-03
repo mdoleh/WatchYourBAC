@@ -6,7 +6,7 @@ import {Beer} from './ApiReturnTypes';
 import {Router} from 'angular2/router';
 import {QuantityComponent} from './QuantityComponent';
 import {BloodAlcoholPipe} from './BacPipe';
-import {PercentPipe} from 'angular2/common';
+import {DecimalPipe} from 'angular2/common';
 
 @Component({
   selector: "app",
@@ -21,7 +21,7 @@ import {PercentPipe} from 'angular2/common';
     <div><label>Blood Alcohol Concentration (BAC):</label>{{bac | bloodAlcohol}}</div>
 	<input type="button" (click)="goBack()" value="< Back" />
   `,
-  providers: [BacService, SerializerService, ConsumedService, PercentPipe],
+  providers: [BacService, SerializerService, ConsumedService, DecimalPipe],
   directives: [QuantityComponent],
   pipes: [BloodAlcoholPipe]
 })
