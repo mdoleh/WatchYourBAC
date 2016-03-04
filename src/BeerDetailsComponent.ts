@@ -19,6 +19,7 @@ export class BeerDetailsComponent implements OnInit {
     
   constructor(
       private _beerService : BeerService,
+      private _serializerService : SerializerService,
 	  private _consumedService : ConsumedService,
 	  private _router: Router,
       routeParams: RouteParams)
@@ -39,7 +40,9 @@ export class BeerDetailsComponent implements OnInit {
   
   addBeer() {
     this._consumedService.addBeer(this.beer, this.beer.quantity);
-	this._router.navigate(['BeerSearch']);
+    let searchTerm = this._serializerService.getData("LastSearchTerm");
+    searchTerm = searchTerm ? searchTerm : "";
+    this._router.navigate(['BeerSearchId', {id: searchTerm}]);
   }
   
   goBack() {

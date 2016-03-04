@@ -14,6 +14,7 @@ import {ConsumedComponent} from './ConsumedComponent';
 @RouteConfig([
   {path:'/', name: 'Info', component: HomeComponent},
   {path:'/search', name: 'BeerSearch', component: SearchComponent},
+  {path:'/search/:id', name: 'BeerSearchId', component: SearchComponent},
   {path:'/beer/:id', name: 'BeerDetails', component: BeerDetailsComponent},
   {path:'/consumed', name: 'Consumed', component: ConsumedComponent}
 ])

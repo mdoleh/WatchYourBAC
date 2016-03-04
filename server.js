@@ -9,7 +9,7 @@ var API_URL = "http://api.brewerydb.com/v2/";
 app.use(express.static('./'));
 
 // any new routes will need to be updated here to ensure proper routing
-app.get(['/', '/search', '/beer/*', '/consumed'], function (req, res){
+app.get(['/', '/search', '/search/*', '/beer/*', '/consumed'], function (req, res){
     res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 

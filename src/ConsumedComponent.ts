@@ -55,6 +55,13 @@ export class ConsumedComponent implements OnInit {
     this.bac = this._bacService.calcBAC(this.computeTotalOzAlcohol());
   }
   
+  getBACColor(bac : number) {
+      if (bac <= 0) return "green";
+      else if (bac > 0 && bac < 0.08) return "goldenrod";
+      else if (bac >= 0.08) return "red";
+      else return "";
+  }
+  
   goBack() {
 	this._router.navigate(['BeerSearch']);
   }

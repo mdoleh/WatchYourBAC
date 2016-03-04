@@ -4,5 +4,5 @@
         <quantity-controls [(quantityModel)]="beer.quantity" (updateQuantity)="updateQuantity(beer)" (removeItem)="removeBeer(beer)"></quantity-controls>
     </li>
 </ul>
-<div><label>Blood Alcohol Concentration (BAC):</label>{{bac | bloodAlcohol}}</div>
+<div [style.color]="getBACColor(bac)"><label>Blood Alcohol Concentration (BAC):</label>{{bac | bloodAlcohol}}</div>
 <input type="button" (click)="goBack()" value="< Back" />
