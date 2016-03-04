@@ -3,13 +3,7 @@ import {Component, Input, Output, EventEmitter} from 'angular2/core';
 @Component({
   selector: "quantity-controls",
   styles: ['input[type="text"] {width: 20px}'],
-  template: `
-    <div>
-		Quantity: <input maxlength="2" [ngModel]="quantityModel" (ngModelChange)="modelUpdated($event)" type="text" /> 
-        <input type="button" value="Update" (click)="onUpdate($event)" *ngIf="!shouldHideUpdate"/>
-        <input type="button" value="Remove" (click)="onRemove($event)" *ngIf="!shouldHideRemove"/>
-    </div>
-  `
+  templateUrl: '../views/widgets/Quantity.html'
 })
 export class QuantityComponent {
     @Output() updateQuantity = new EventEmitter<{}>();

@@ -3,12 +3,7 @@ import {Component, Input, Output, EventEmitter} from 'angular2/core';
 @Component({
   selector: "search-buttons",
   styles: ['h1 {color: purple}'],
-  template: `
-    <div>
-        <input type="button" value="Previous" (click)="onPreviousPage($event)" [disabled]="shouldDisablePrevious"/>
-        <input type="button" value="Next" (click)="onNextPage($event)" [disabled]="shouldDisableNext"/>
-    </div>
-  `
+  templateUrl: '../views/widgets/SearchButtons.html'
 })
 export class SearchButtonsComponent {
     @Output() nextPage = new EventEmitter<{}>();

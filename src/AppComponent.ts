@@ -8,15 +8,7 @@ import {ConsumedComponent} from './ConsumedComponent';
 @Component({
   selector: "app",
   styles: ['.api-data {color: blue}'],
-  template: `
-    <h1>WatchYourBAC</h1>
-    <nav>
-        <a [routerLink]="['Info']">Home</a>
-        <a [routerLink]="['BeerSearch']">Search</a>
-        <a [routerLink]="['Consumed']">Beer Consumed</a>
-    </nav>
-    <router-outlet></router-outlet>
-  `,
+  templateUrl: '../views/App.html',
   directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([

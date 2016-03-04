@@ -11,16 +11,7 @@ import {DecimalPipe} from 'angular2/common';
 @Component({
   selector: "app",
   styles: ['h1 .updated {color: green}', 'input[type="text"] {width: 20px}'],
-  template: `
-    <h1>Beers Consumed</h1>
-	<ul *ngFor="#beer of consumedBeers">
-		<li>{{beer.nameDisplay}} {{beer.size}}oz
-			<quantity-controls [(quantityModel)]="beer.quantity" (updateQuantity)="updateQuantity(beer)" (removeItem)="removeBeer(beer)"></quantity-controls>
-		</li>
-	</ul>
-    <div><label>Blood Alcohol Concentration (BAC):</label>{{bac | bloodAlcohol}}</div>
-	<input type="button" (click)="goBack()" value="< Back" />
-  `,
+  templateUrl: '../views/Consumed.html',
   providers: [BacService, SerializerService, ConsumedService, DecimalPipe],
   directives: [QuantityComponent],
   pipes: [BloodAlcoholPipe]
