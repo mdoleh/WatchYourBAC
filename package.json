@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "scripts": {
     "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "lite": "lite-server",
+    "tsc:dev": "tsc -w -p src/",
+    "tsc:test": "tsc -w -p test/",
     "server": "node server",
     "nodemon": "nodemon server",
-    "start-old": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
-    "start": "concurrent \"npm run tsc:w\" \"npm run nodemon ./server.js\" "
+    "start": "concurrent \"npm run tsc:dev\" \"npm run nodemon ./server.js\" ",
+    "test": "concurrent \"npm run tsc:dev\" \"npm run tsc:test\" \"npm run nodemon ./server.js\" "
   },
   "license": "ISC",
   "dependencies": {
