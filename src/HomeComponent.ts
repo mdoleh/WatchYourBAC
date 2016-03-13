@@ -8,7 +8,7 @@ import {Person} from './Person';
 
 @Component({
   selector: "app",
-  styles: ['h1 {color: purple}'],
+  styleUrls: ['../styles/styles.css', '../styles/forms.css'],
   templateUrl: '../views/Home.html',
   directives: [FORM_DIRECTIVES, RadioControlValueAccessor],
   providers: [BacService, SerializerService]
