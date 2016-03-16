@@ -7,7 +7,6 @@ import {ConsumedComponent} from './ConsumedComponent';
 
 @Component({
   selector: "app",
-  styles: ['.api-data {color: blue}'],
   templateUrl: '../views/App.html',
   directives: [ROUTER_DIRECTIVES]
 })

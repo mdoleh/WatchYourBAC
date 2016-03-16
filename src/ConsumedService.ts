@@ -10,7 +10,6 @@ export class ConsumedService {
 
 	addBeer(beer : Beer, quantity : number = 1) {
 		this.getState();
-        beer.id += beer.size;
 		beer.quantity = quantity;
 		let index = this.getIndex(beer);
 		if (index > -1) {

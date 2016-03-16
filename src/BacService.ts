@@ -5,8 +5,8 @@ import {SerializerService} from './SerializerService';
 @Injectable()
 export class BacService {
   private _person : Person = {
-      bodyWeight: 0,
-      hoursDrinking: 0,
+      bodyWeight: null,
+      hoursDrinking: null,
       gender: ""
   };
     
