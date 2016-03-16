@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-<h1>Fill out your information</h1>
-<div>
-    <input id="male" type="radio" name="gender" [(ngModel)]="model.gender" value="Male" /><label for="male"><span><span></span></span>Male</label>
-    <input id="female" type="radio" name="gender" [(ngModel)]="model.gender" value="Female" /><label for="female"><span><span></span></span>Female</label>
-</div>
-<div>
-    Body Weight: <input type="text" [(ngModel)]="model.bodyWeight" />
-</div>
-<div>
-    Hours Drinking: <input type="text" [(ngModel)]="model.hoursDrinking" />
-</div>
-<input (click)="nextPage()" type="button" value="Next"/>
-=======
 <div class="container">
     <h2>Fill out your information</h2>
     <form (ngSubmit)="nextPage()" #homeForm="ngForm">
@@ -72,4 +58,3 @@
         <button type="submit" class="btn btn-default" [disabled]="!homeForm.form.valid" >Next</button>
     </form>
 </div>
->>>>>>> 3e3b1b78487e4ac188c0a2f8128ca4a73a8de4bd
