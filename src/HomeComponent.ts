@@ -8,7 +8,7 @@ import {Person} from './Person';
 
 @Component({
   selector: "app",
-  styleUrls: ['../styles/styles.css', '../styles/forms.css'],
+  styleUrls: [''],
   templateUrl: '../views/Home.html',
   directives: [FORM_DIRECTIVES, RadioControlValueAccessor],
   providers: [BacService, SerializerService]

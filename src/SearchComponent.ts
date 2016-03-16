@@ -7,7 +7,7 @@ import {SerializerService} from './SerializerService';
 
 @Component({
   selector: "app",
-  styles: ['h1 {color: red}'],
+  styleUrls: [''],
   templateUrl: '../views/Search.html',
   providers: [BeerService, SerializerService],
   directives: [SearchButtonsComponent]

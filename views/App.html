@@ -7,7 +7,7 @@
 				</h1>
 			</div>
 			<ul class="nav nav-pills">
-				<li class="active">
+				<li>
 					<a [routerLink]="['Info']">Home</a>
 				</li>
 				<li>
@@ -17,7 +17,9 @@
 					<a [routerLink]="['Consumed']">Beers Consumed</a>
 				</li><br />
 			</ul>
-            <router-outlet></router-outlet>
+            <div class="container">
+                <router-outlet></router-outlet>
+            </div>
 		</div>
 	</div>
 </div>
