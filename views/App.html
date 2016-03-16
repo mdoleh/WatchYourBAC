@@ -1,7 +1,23 @@
-<h1>WatchYourBAC</h1>
-<nav>
-    <a [routerLink]="['Info']">Home</a>
-    <a [routerLink]="['BeerSearch']">Search</a>
-    <a [routerLink]="['Consumed']">Beers Consumed</a>
-</nav>
-<router-outlet></router-outlet>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header">
+				<h1>
+					WatchYourBAC <small>Compute Your Blood Alcohol Level</small>
+				</h1>
+			</div>
+			<ul class="nav nav-pills">
+				<li class="active">
+					<a [routerLink]="['Info']">Home</a>
+				</li>
+				<li>
+					<a [routerLink]="['BeerSearch']">Search</a>
+				</li>
+				<li>
+					<a [routerLink]="['Consumed']">Beers Consumed</a>
+				</li><br />
+			</ul>
+            <router-outlet></router-outlet>
+		</div>
+	</div>
+</div>
