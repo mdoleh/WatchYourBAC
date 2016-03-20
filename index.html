@@ -6,12 +6,17 @@
     
     <title>Watch Your BAC</title>
 
-    <link rel="stylesheet" href="styles/bootstrap-theme.min.css" />
-    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="styles/forms.css" />
     <link rel="stylesheet" href="styles/styles.css" />
-    <script src="styles/js/jquery.min.js"></script>
-    <script src="styles/js/bootstrap.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+    <!-- IE polyfills -->
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+    <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>  
 
     <!-- 1. Load libraries -->
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Intl.~locale.en"></script>
