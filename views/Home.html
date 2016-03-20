@@ -9,7 +9,7 @@
                     <input id="male"
                            type="radio"
                            name="gender"
-                           [(ngModel)]="model.gender"
+                           [(ngModel)]="gender[0]"
                            ngControl="gender"
                            value="Male"/>
                     Male
@@ -21,10 +21,9 @@
                     <input id="female"
                            type="radio"
                            name="gender"
-                           [(ngModel)]="model.gender"
+                           [(ngModel)]="gender[1]"
                            ngControl="gender"
-                           value="Female"
-                           checked/>
+                           value="Female"/>
                     Female
                 </label>
             </div>

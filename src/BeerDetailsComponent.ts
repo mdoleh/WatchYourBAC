@@ -5,14 +5,13 @@ import {Beer} from './ApiReturnTypes';
 import {SerializerService} from './SerializerService';
 import {ConsumedService} from './ConsumedService';
 import {QuantityComponent} from './QuantityComponent';
-import {RadioControlValueAccessor} from './RadioButtonAccessor';
 
 @Component({
   selector: "app",
   styles: ['h1 {color: orange}'],
   templateUrl: '../views/BeerDetails.html',
   providers: [BeerService, SerializerService, ConsumedService],
-  directives: [QuantityComponent, RadioControlValueAccessor]
+  directives: [QuantityComponent]
 })
 export class BeerDetailsComponent implements OnInit {
   private beerId : string;
