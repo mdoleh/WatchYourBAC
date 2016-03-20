@@ -5,8 +5,8 @@
 <div>Alcohol by Volume: {{beer.abv}}%</div>
 <quantity-controls [(quantityModel)]="beer.quantity" shouldHideUpdate="true" shouldHideRemove="true"></quantity-controls>
 <div>
-    <input id="bottle/pint" type="radio" name="beerSize" [(ngModel)]="beer.size" value="16" /><label for="bottle/pint">Bottle/Pint</label>
-    <input id="can" type="radio" name="beerSize" [(ngModel)]="beer.size" value="12" /><label for="can">Can</label>
+    <input id="bottle/pint" type="radio" name="beerSize" [(ngModel)]="beerSize[1]" value="16" /><label for="bottle/pint">Bottle/Pint</label>
+    <input id="can" type="radio" name="beerSize" [(ngModel)]="beerSize[0]" value="12" /><label for="can">Can</label>
 </div>
 <input type="button" (click)="goBack()" value="< Back" />
 <input (click)="addBeer()" type="button" value="Add Beer" />
