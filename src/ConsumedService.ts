@@ -42,7 +42,9 @@ export class ConsumedService {
 	}
 	
 	private getIndex(beer : Beer) : number {
-		return this._beers.map(b => b.id).indexOf(beer.id);
+        let index = this._beers.map(b => b.id).indexOf(beer.id);
+		if (index === -1 || this._beers[index].size === beer.size) return index;
+        else return -1;
 	}
 
 	private restoreConsumedData() {
