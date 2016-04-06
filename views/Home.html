@@ -31,11 +31,12 @@
         
         <div class="form-group">
             <label for="bodyWeight">Body Weight:</label>
-            <input type="text"
+            <input type="number"
                    [(ngModel)]="model.bodyWeight"
                    class="form-control"
                    ngControl="bodyWeight"
                    #bodyWeight="ngForm"
+                   pattern="[0-9]+"
                    required/>
             <div [hidden]="bodyWeight.valid || bodyWeight.pristine" class="alert alert-danger">
                 We need to know how much you weigh
@@ -44,11 +45,12 @@
         
         <div class="form-group">
             <label for="hoursDrinking">Hours Drinking:</label>
-            <input type="text"
+            <input type="number"
                    [(ngModel)]="model.hoursDrinking"
                    class="form-control"
                    ngControl="hoursDrinking"
                    #hoursDrinking="ngForm"
+                   pattern="[0-9]+"
                    required/>
             <div [hidden]="hoursDrinking.valid || hoursDrinking.pristine" class="alert alert-danger">
                 We need to know how long you were drinking ... 

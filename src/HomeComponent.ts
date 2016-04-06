@@ -19,8 +19,8 @@ export class HomeComponent {
     constructor(private _bacService : BacService,
     private _router: Router) {
         this.model = _bacService.getState();
-        this.gender.push(new RadioButtonState(this.model.gender === "Male" ? true : false, "Male"));
-        this.gender.push(new RadioButtonState(this.model.gender === "Female" ? true : false, "Female"));
+        this.gender.push(new RadioButtonState(this.model.gender === "Male", "Male"));
+        this.gender.push(new RadioButtonState(this.model.gender === "Female", "Female"));
     }
     
     nextPage() {
