@@ -1,12 +1,13 @@
-<h1>Beer  Details</h1>
-<div>beer ID: {{beerId}}</div>
-<div async>Name: {{beer.nameDisplay}}</div>
-<div>Description: {{beer.description}}</div>
-<div>Alcohol by Volume: {{beer.abv}}%</div>
-<quantity-controls [(quantityModel)]="beer.quantity" shouldHideUpdate="true" shouldHideRemove="true"></quantity-controls>
-<div>
-    <input id="bottle/pint" type="radio" name="beerSize" [(ngModel)]="beerSize[1]" value="16" /><label for="bottle/pint">Bottle/Pint</label>
-    <input id="can" type="radio" name="beerSize" [(ngModel)]="beerSize[0]" value="12" /><label for="can">Can</label>
+<h1>Beer Details</h1>
+<div class="form-group input-group">
+    <div>Name: {{beer.nameDisplay}}</div>
+    <div>Description: {{beer.description}}</div>
+    <div>Alcohol by Volume: {{beer.abv}}%</div>
+    <quantity-controls [(quantityModel)]="beer.quantity" shouldHideUpdate="true" shouldHideRemove="true"></quantity-controls>
+    <div>
+        <input id="bottle/pint" type="radio" name="beerSize" [(ngModel)]="beerSize[1]" value="16" /><label for="bottle/pint">Bottle/Pint</label>
+        <input id="can" type="radio" name="beerSize" [(ngModel)]="beerSize[0]" value="12" /><label for="can">Can</label>
+    </div>
 </div>
-<input type="button" (click)="goBack()" value="< Back" />
-<input (click)="addBeer()" type="button" value="Add Beer" />
+<input class="btn btn-default" type="button" (click)="goBack()" value="< Back" />
+<input class="btn btn-default" (click)="addBeer()" type="button" value="Add Beer" />

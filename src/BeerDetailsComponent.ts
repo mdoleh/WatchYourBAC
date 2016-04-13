@@ -9,7 +9,7 @@ import {QuantityComponent} from './QuantityComponent';
 
 @Component({
   selector: "app",
-  styles: ['h1 {color: orange}'],
+  styleUrls: ["../styles/pages/beerdetailscomponent.css"],
   templateUrl: '../views/BeerDetails.html',
   providers: [BeerService, SerializerService, ConsumedService],
   directives: [QuantityComponent]
