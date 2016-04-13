@@ -1,8 +1,8 @@
 <h1>Beer Details</h1>
 <div class="form-group input-group">
-    <div>Name: {{beer.nameDisplay}}</div>
-    <div>Description: {{beer.description}}</div>
-    <div>Alcohol by Volume: {{beer.abv}}%</div>
+    <div class="info">Name: {{beer.nameDisplay}}</div>
+    <div class="info">Description: {{beer.description}}</div>
+    <div class="info">Alcohol by Volume: {{beer.abv}}%</div>
     <quantity-controls [(quantityModel)]="beer.quantity" shouldHideUpdate="true" shouldHideRemove="true"></quantity-controls>
     <div>
         <input id="bottle/pint" type="radio" name="beerSize" [(ngModel)]="beerSize[1]" value="16" /><label for="bottle/pint">Bottle/Pint</label>

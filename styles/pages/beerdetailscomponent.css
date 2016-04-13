@@ -1,3 +1,7 @@
 .input-group {
     padding-left: 5%;
 }
+
+label .info {
+    font-size: 1.2em;
+}
