@@ -13,10 +13,14 @@ label {
 }
 
 .radio {
-    font-size: 1.2em;
+    font-size: 1.1em;
+    padding-left: 10%;
 }
 
 .radio > label {
     padding-left: 0;
-    padding-right: 10%;
+}
+
+.radio > label:nth-of-type(1) {
+    padding-right: 15%;
 }
