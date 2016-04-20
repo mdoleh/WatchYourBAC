@@ -2,7 +2,7 @@ import {Component, Input, Output, EventEmitter} from 'angular2/core';
 
 @Component({
   selector: "quantity-controls",
-  styles: ['input[type="text"] {width: 20px}'],
+  styleUrls: ['../styles/widgets/quantitywidget.css'],
   templateUrl: '../views/widgets/Quantity.html'
 })
 export class QuantityComponent {

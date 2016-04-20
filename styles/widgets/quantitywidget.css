@@ -1,0 +1,10 @@
+input[type="text"] { 
+    width: 35px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+label {
+    font-size: 1.2em;
+    padding-right: 2%;
+}

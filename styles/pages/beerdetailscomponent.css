@@ -9,4 +9,14 @@
 
 label {
     font-weight: bold;
+    font-size: 1.2em;
+}
+
+.radio {
+    font-size: 1.2em;
+}
+
+.radio > label {
+    padding-left: 0;
+    padding-right: 10%;
 }
