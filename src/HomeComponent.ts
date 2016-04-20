@@ -7,7 +7,7 @@ import {Person} from './Person';
 
 @Component({
   selector: "app",
-  styleUrls: [''],
+  styleUrls: ['../styles/pages/homecomponent.css'],
   templateUrl: '../views/Home.html',
   directives: [FORM_DIRECTIVES],
   providers: [BacService, SerializerService]
