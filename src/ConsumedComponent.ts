@@ -10,7 +10,7 @@ import {DecimalPipe} from 'angular2/common';
 
 @Component({
   selector: "app",
-  styles: ['h1 .updated {color: green}', 'input[type="text"] {width: 20px}'],
+  styleUrls: ['../styles/pages/consumedcomponent.css'],
   templateUrl: '../views/Consumed.html',
   providers: [BacService, SerializerService, ConsumedService, DecimalPipe],
   directives: [QuantityComponent],

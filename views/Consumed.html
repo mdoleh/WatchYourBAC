@@ -1,8 +1,8 @@
 <h1>Beers Consumed</h1>
 <ul *ngFor="#beer of consumedBeers">
-    <li>{{beer.nameDisplay}} {{beer.size}}oz
+    <li><label>{{beer.nameDisplay}} {{beer.size}}oz</label>
         <quantity-controls [(quantityModel)]="beer.quantity" (updateQuantity)="updateQuantity(beer)" (removeItem)="removeBeer(beer)"></quantity-controls>
     </li>
 </ul>
-<div [style.color]="getBACColor(bac)"><label>Blood Alcohol Concentration (BAC):</label>{{bac | bloodAlcohol}}</div>
-<input type="button" (click)="goBack()" value="< Back" />
+<div class="bac" [style.color]="getBACColor(bac)"><label>Blood Alcohol Concentration (BAC):</label>{{bac | bloodAlcohol}}</div>
+<input class="btn btn-default" type="button" (click)="goBack()" value="< Back" />
