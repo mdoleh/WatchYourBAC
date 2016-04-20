@@ -1,5 +1,5 @@
 <div>
-    Quantity: <input maxlength="2" [ngModel]="quantityModel" (ngModelChange)="modelUpdated($event)" type="text" /> 
+    <label>Quantity:</label><input maxlength="2" [ngModel]="quantityModel" (ngModelChange)="modelUpdated($event)" type="text" /> 
     <input type="button" value="Update" (click)="onUpdate($event)" *ngIf="!shouldHideUpdate"/>
     <input type="button" value="Remove" (click)="onRemove($event)" *ngIf="!shouldHideRemove"/>
 </div>

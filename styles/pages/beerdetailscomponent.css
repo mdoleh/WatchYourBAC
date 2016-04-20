@@ -2,6 +2,11 @@
     padding-left: 5%;
 }
 
-label .info {
+.info {
     font-size: 1.2em;
+    padding-bottom: 5%;
+}
+
+label {
+    font-weight: bold;
 }
