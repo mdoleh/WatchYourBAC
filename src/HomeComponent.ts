@@ -2,8 +2,9 @@ import {Component} from 'angular2/core';
 import {BacService} from './BacService';
 import {SerializerService} from './SerializerService';
 import {Router} from 'angular2/router';
-import {FORM_DIRECTIVES, RadioButtonState} from 'angular2/common';
+import {FORM_DIRECTIVES, RadioButtonState, Control, ControlGroup, FormBuilder, Validators} from 'angular2/common';
 import {Person} from './Person';
+import {GenderValidator} from './GenderValidator';
 
 @Component({
   selector: "app",
@@ -16,11 +17,26 @@ export class HomeComponent {
     private model : Person;
     private gender = [];
     
+    bodyWeightControl: Control;
+    hoursDrinkingControl: Control;
+    genderControl : Control;
+    form : ControlGroup;
+    
     constructor(private _bacService : BacService,
-    private _router: Router) {
+    private _router: Router,
+    private builder: FormBuilder) {
         this.model = _bacService.getState();
         this.gender.push(new RadioButtonState(this.model.gender === "Male", "Male"));
         this.gender.push(new RadioButtonState(this.model.gender === "Female", "Female"));
+        
+        this.bodyWeightControl = new Control('', Validators.required);
+        this.hoursDrinkingControl = new Control('', Validators.required);
+        this.genderControl = new Control('', GenderValidator.genderSelected);
+        this.form = builder.group({
+            bodyWeightControl: this.bodyWeightControl,
+            hoursDrinkingControl: this.hoursDrinkingControl,
+            genderControl: this.genderControl
+        });
     }
     
     nextPage() {
