@@ -8,7 +8,6 @@ import {ConsumedService} from './ConsumedService';
 import {QuantityComponent} from './QuantityComponent';
 
 @Component({
-  selector: "app",
   styleUrls: ["../styles/pages/beerdetailscomponent.css"],
   templateUrl: '../views/BeerDetails.html',
   providers: [BeerService, SerializerService, ConsumedService],

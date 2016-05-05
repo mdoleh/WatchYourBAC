@@ -7,7 +7,6 @@ import {Person} from './Person';
 import {GenderValidator} from './GenderValidator';
 
 @Component({
-  selector: "app",
   styleUrls: ['../styles/pages/homecomponent.css'],
   templateUrl: '../views/Home.html',
   directives: [FORM_DIRECTIVES],

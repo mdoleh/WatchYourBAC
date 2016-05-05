@@ -9,7 +9,6 @@ import {BloodAlcoholPipe} from './BacPipe';
 import {DecimalPipe} from 'angular2/common';
 
 @Component({
-  selector: "app",
   styleUrls: ['../styles/pages/consumedcomponent.css'],
   templateUrl: '../views/Consumed.html',
   providers: [BacService, SerializerService, ConsumedService, DecimalPipe],

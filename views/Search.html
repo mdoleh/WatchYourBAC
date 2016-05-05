@@ -15,7 +15,7 @@
 <div class="results">
     <div *ngIf="rawResponse.numberOfPages">Viewing page {{rawResponse.currentPage}} of {{rawResponse.numberOfPages}}</div>
     <ul class="api-data">
-        <li *ngFor="#beer of beers" (click)="beerSelected(beer.id)"><span class="icon">🍺</span> {{beer.nameDisplay}}</li>
+        <li *ngFor="let beer of beers" (click)="beerSelected(beer.id)"><span class="icon">🍺</span> {{beer.nameDisplay}}</li>
     </ul>
     <search-buttons *ngIf="rawResponse.numberOfPages"
                     (previousPage)="previousPage(beerName, rawResponse.currentPage)"

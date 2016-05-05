@@ -6,7 +6,6 @@ import {SearchButtonsComponent} from './SearchButtonsComponent';
 import {SerializerService} from './SerializerService';
 
 @Component({
-  selector: "app",
   styleUrls: ['../styles/pages/searchcomponent.css'],
   templateUrl: '../views/Search.html',
   providers: [BeerService, SerializerService],

@@ -1,5 +1,5 @@
 <h1>Beers Consumed</h1>
-<ul *ngFor="#beer of consumedBeers">
+<ul *ngFor="let beer of consumedBeers">
     <li><label>{{beer.nameDisplay}} {{beer.size}}oz</label>
         <quantity-controls [(quantityModel)]="beer.quantity" (updateQuantity)="updateQuantity(beer)" (removeItem)="removeBeer(beer)"></quantity-controls>
     </li>
