@@ -28,6 +28,7 @@ export class SearchComponent implements OnInit {
     }
     
     ngOnInit() {
+        this.beers = [];
         this.search(this.beerName);
         this._serializerService.storeData("LastSearchTerm", "");
     }
@@ -77,6 +78,11 @@ export class SearchComponent implements OnInit {
     private canSearch(beerName : string)
     {
         return this.callComplete && beerName !== "";
+    }
+    
+    private canClear(beerName : string)
+    {
+        return this.canSearch(beerName) || this.beers.length > 0;
     }
     
     beerSelected(id: number) {

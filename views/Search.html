@@ -4,7 +4,7 @@
     <input type="text" [(ngModel)]="beerName" class="form-control"/>
     <span class="input-group-btn">
         <button class="btn btn-default" (click)="search(beerName)" type="button" [disabled]="!canSearch(beerName)">Search</button>
-        <button class="btn btn-default" (click)="reset()" type="button">Clear</button>
+        <button class="btn btn-default" (click)="reset()" type="button" [disabled]="!canClear(beerName)">Clear</button>
     </span>
 </div>
 <search-buttons (previousPage)="previousPage(beerName, rawResponse.currentPage)"

@@ -1,6 +1,6 @@
 import {Component, OnInit} from 'angular2/core';
 import {RouteParams, Router} from 'angular2/router';
-import {RadioButtonState, FORM_DIRECTIVES} from 'angular2/common';
+import {RadioButtonState, FORM_DIRECTIVES, Control, ControlGroup, FormBuilder, Validators} from 'angular2/common';
 import {BeerService} from './BeerService';
 import {Beer} from './ApiReturnTypes';
 import {SerializerService} from './SerializerService';
@@ -11,21 +11,28 @@ import {QuantityComponent} from './QuantityComponent';
   styleUrls: ["../styles/pages/beerdetailscomponent.css"],
   templateUrl: '../views/BeerDetails.html',
   providers: [BeerService, SerializerService, ConsumedService],
-  directives: [QuantityComponent]
+  directives: [FORM_DIRECTIVES, QuantityComponent]
 })
 export class BeerDetailsComponent implements OnInit {
   private beerId : string;
+  quantityControl : Control;
+  form : ControlGroup;
     
   constructor(
       private _beerService : BeerService,
       private _serializerService : SerializerService,
 	  private _consumedService : ConsumedService,
 	  private _router: Router,
-      routeParams: RouteParams)
+      routeParams: RouteParams,
+      private builder: FormBuilder)
   {
       this.beerId = routeParams.get("id");
       this.beerSize.push(new RadioButtonState(false, "12"));
       this.beerSize.push(new RadioButtonState(true, "16"));
+      this.quantityControl = new Control('', Validators.required);
+        this.form = builder.group({
+          quantityControl: this.quantityControl
+        });
   }
   private beer = new Beer();
   private beerSize = [];
