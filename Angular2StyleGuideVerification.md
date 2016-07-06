@@ -3,7 +3,7 @@
 
 ## Sessions
 
-1. [Intro - shell](http://plnkr.co/edit/cfcFBIf6KuNELspLOKZ7?p=preview)
+1. [Intro - shell](http://plnkr.co/edit/PNagJuu0kuSdtQVVILPP?p=preview)
 2. [Home page](https://plnkr.co/edit/CkaUN4?p=preview)
 3. [Search page](https://plnkr.co/edit/20ssm8OyGxC9JpHLIcjQ?p=preview)
 
