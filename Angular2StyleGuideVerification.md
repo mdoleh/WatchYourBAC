@@ -13,10 +13,14 @@
   1. Rule of One
     * The Home Component, search component, etc. have single responsibilities
     * All sessions follow this rule
-  2. Small functions
+  1. Small functions
     * From the Home Component: nextPage() and getRadioValue() are small (session 2)
-2. Naming
+1. Naming
   1. General naming guidelines
     * serializer.service.ts : serializer is the feature, service is the type (session 2)
-  2. Separate file names with dots and dashes
+  1. Separate file names with dots and dashes
     * bac.service.ts : dot separation (session 2)
+  1. Components and Directives - consistent name, symbol suffix
+    * beer-details.component.ts contains the **BeerDetails**Component class (session 2)
+  1. Service names - suffix with *Service* when it's not clear what it is
+    * hmmm
