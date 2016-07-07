@@ -3,7 +3,7 @@
 
 ## Sessions
 
-1. [Intro - shell](http://plnkr.co/edit/cfcFBIf6KuNELspLOKZ7?p=preview)
+1. [Intro - shell](http://plnkr.co/edit/PNagJuu0kuSdtQVVILPP?p=preview)
 2. [Home page](https://plnkr.co/edit/CkaUN4?p=preview)
 3. [Search page](https://plnkr.co/edit/20ssm8OyGxC9JpHLIcjQ?p=preview)
 
@@ -18,9 +18,14 @@
 1. Naming
   1. General naming guidelines
     * serializer.service.ts : serializer is the feature, service is the type (session 2)
+<<<<<<< HEAD
   1. Separate file names with dots and dashes
     * bac.service.ts : dot separation (session 2)
   1. Components and Directives - consistent name, symbol suffix
     * beer-details.component.ts contains the **BeerDetails**Component class (session 2)
   1. Service names - suffix with *Service* when it's not clear what it is
     * hmmm
+=======
+  2. Separate file names with dots and dashes
+    * bac.service.ts : dot separation (session 2)
+>>>>>>> 15724faa652f374964c843e27bd25c785d5920eb
