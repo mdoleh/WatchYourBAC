@@ -7,7 +7,7 @@
 1. [Home page](https://plnkr.co/edit/CkaUN4?p=preview) - [upgraded to RC4](http://plnkr.co/edit/DDjowr23cqbiygwuttn9?p=preview)
 1. [Search page](https://plnkr.co/edit/20ssm8OyGxC9JpHLIcjQ?p=preview) - [upgraded to RC4](http://plnkr.co/edit/zRd8hCYzothzrzwWYlC6?p=preview)
 1. [Beer Details page](http://plnkr.co/edit/ETPUC6FXi0m1LdQP0rln?p=preview) - [upgraded to RC4](https://plnkr.co/edit/Ue1Y4OZBjdE1vfASA0OB?p=info)
-1. [Beers Consumed page](http://plnkr.co/edit/iCzPdA7PQEgS0bRhYgP3?p=preview)
+1. [Beers Consumed page](http://plnkr.co/edit/iCzPdA7PQEgS0bRhYgP3?p=preview) - [upgraded to RC4](http://plnkr.co/edit/Chb9YAUSIZ4nOZogRM2r?p=preview)
 
 ## Verification
 
