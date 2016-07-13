@@ -8,6 +8,7 @@
 1. [Search page](http://plnkr.co/edit/zRd8hCYzothzrzwWYlC6?p=preview)
 1. [Beer Details page](https://plnkr.co/edit/Ue1Y4OZBjdE1vfASA0OB?p=preview)
 1. [Beers Consumed page](http://plnkr.co/edit/Chb9YAUSIZ4nOZogRM2r?p=preview)
+1. [Unit Testing](http://plnkr.co/edit/VKnB6Rwg8rNHjbqoc0HH?p=preview)
 
 ## Verification
 
