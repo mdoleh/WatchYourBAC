@@ -25,4 +25,6 @@
   1. Components and Directives - consistent name, symbol suffix
     * beer-details.component.ts contains the **BeerDetails**Component class (session 2)
   1. Service names - suffix with *Service* when it's not clear what it is
-    * hmmm
+    * bac.service.ts contains the BacService (session 2)
+    * serializer.service.ts contains the Serializer (session 2)
+1. Coding Conventions
