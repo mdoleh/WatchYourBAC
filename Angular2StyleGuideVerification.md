@@ -29,3 +29,15 @@
     * bac.service.ts contains the BacService (session 2)
     * serializer.service.ts contains the Serializer (session 2)
 1. Coding Conventions
+1. Application Structure
+  * Remember **LIFT**
+    * **L**ocate code quickly
+      * store files in intuitive locations
+      * related files are near each other
+    * **I**dentify code at a glance
+      * files contain exactly one thing per file
+    * **F**lattest possible structure
+      * not too much nesting unless there are many files in a folder
+      * all of our files live in app/, views/, or styles/
+    * **T**ry to be DRY
+      * quantity-component.ts is reusable code used in both the BeerDetailsComponent and ConsumedComponent (session 5)
