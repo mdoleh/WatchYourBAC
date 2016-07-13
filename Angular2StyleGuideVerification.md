@@ -29,6 +29,14 @@
     * bac.service.ts contains the BacService (session 2)
     * serializer.service.ts contains the Serializer (session 2)
 1. Coding Conventions
+  1. Classes - camel cased
+    * BacService is camel-cased (from bac.service.ts, session 2)
+  1. Constants - for use with constant data
+    * See Constants.ts (session 3)
+  1. Interfaces - camel cased without 'I' prefix
+    * See api-return-types.ts (session 3)
+  1. Methods - lower-camel cased, don't prefix private methods with underscore
+    * BacService - getState() and restoreUserData() (session 2)
 1. Application Structure
   * Remember **LIFT**
     * **L**ocate code quickly
