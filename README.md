@@ -13,7 +13,7 @@ npm start
 
 ## Sessions
 
-1. [Intro - shell](http://plnkr.co/edit/PNagJuu0kuSdtQVVILPP?p=preview)
+1. [Intro - shell](http://plnkr.co/edit/Te07jE3fttP7XgQAiAjx?p=preview)
 1. [Home page](http://plnkr.co/edit/DDjowr23cqbiygwuttn9?p=preview)
 1. [Search page](http://plnkr.co/edit/zRd8hCYzothzrzwWYlC6?p=preview)
 1. [Beer Details page](https://plnkr.co/edit/Ue1Y4OZBjdE1vfASA0OB?p=preview)
