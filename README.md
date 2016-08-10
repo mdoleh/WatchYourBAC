@@ -1,6 +1,6 @@
 # Watch Your BAC
 
-Simple web application to compute one's Blood Alcohol Content (BAC) built using Angular 2.0 and Unit tested with Jamine 2.4.1.
+Simple web application to compute one's Blood Alcohol Content (BAC) built using Angular 2.0 and Unit tested with Jasmine 2.4.1.
 
 ## Run the app
 
