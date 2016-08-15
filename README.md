@@ -17,7 +17,7 @@ npm start
 1. [Home page](http://plnkr.co/edit/xBUBLzztIT4RBQHgUHVB?p=preview)
 1. [Search page](http://plnkr.co/edit/aG0JAyDmDDjkr1CBqu0h?p=preview)
 1. [Beer Details page](https://plnkr.co/edit/NbIKgUr3DUYcEkdxMoJG?p=preview)
-1. [Beers Consumed page](http://plnkr.co/edit/Chb9YAUSIZ4nOZogRM2r?p=preview)
+1. [Beers Consumed page](http://plnkr.co/edit/HuIhAfsRCDz7iF0C6HWd?p=preview)
 1. [Unit Testing](http://plnkr.co/edit/VKnB6Rwg8rNHjbqoc0HH?p=preview)
 
 ## Angular 2 style guide [here](https://angular.io/docs/ts/latest/guide/style-guide.html)
