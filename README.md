@@ -13,7 +13,7 @@ npm start
 
 ## Sessions
 
-1. [Hello World](http://plnkr.co/edit/HwwrOxvvpdodPz9hFAtv?p=preview) and creating [The Shell](http://plnkr.co/edit/Te07jE3fttP7XgQAiAjx?p=preview)
+1. [Hello World](http://plnkr.co/edit/jcDMNeNrgOhAxvo6QFGi?p=preview) and creating [The Shell](http://plnkr.co/edit/Te07jE3fttP7XgQAiAjx?p=preview)
 1. [Home page](http://plnkr.co/edit/xBUBLzztIT4RBQHgUHVB?p=preview)
 1. [Search page](http://plnkr.co/edit/aG0JAyDmDDjkr1CBqu0h?p=preview)
 1. [Beer Details page](https://plnkr.co/edit/NbIKgUr3DUYcEkdxMoJG?p=preview)
