@@ -19,7 +19,7 @@ npm start
   1. [Updated Home page](http://plnkr.co/edit/4a7GFPDubSZFBVKKgkZs?p=preview) (RC5 and new Forms API)
   1. [**Where we left off**](http://plnkr.co/edit/4zIxVyOzI7vAKlBQmSGh?p=preview) from last session, 8/24/16
 1. [Search page](http://plnkr.co/edit/3Ersc8BTwudRC9cnaLYs?p=preview)
-2. [**Where we left off**](http://plnkr.co/edit/3XHWiMkBnsjXwj4dCnQj) from last session, 8/31/16
+  1. [**Where we left off**](http://plnkr.co/edit/3XHWiMkBnsjXwj4dCnQj) from last session, 8/31/16
 1. [Beer Details page](https://plnkr.co/edit/NbIKgUr3DUYcEkdxMoJG?p=preview)
 1. [Beers Consumed page](http://plnkr.co/edit/HuIhAfsRCDz7iF0C6HWd?p=preview)
 1. [Unit Testing](http://plnkr.co/edit/kwbzi9FZyXro85fSBFxF?p=preview)
