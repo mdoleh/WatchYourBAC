@@ -19,7 +19,6 @@ npm start
   1. [**Where we left off**](http://plnkr.co/edit/3XHWiMkBnsjXwj4dCnQj) from last session, 8/31/16
 1. [Beer Details page](https://plnkr.co/edit/NbIKgUr3DUYcEkdxMoJG?p=preview)
   1. [**Where we left off**](http://plnkr.co/edit/6wo2bqT5HKzS909eFQIN?p=preview) from last session 9/7/16
-  2. [**Repaired Plunk**](http://plnkr.co/edit/RBZfmaPd0z1cBbPhopQE) forked from above plunk, update 9/12 - apparently everything is working fine now, don't know what the previous issue was all about
 1. [Beers Consumed page](http://plnkr.co/edit/HuIhAfsRCDz7iF0C6HWd?p=preview)
 1. [Unit Testing](http://plnkr.co/edit/kwbzi9FZyXro85fSBFxF?p=preview)
 
