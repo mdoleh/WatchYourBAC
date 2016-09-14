@@ -19,6 +19,7 @@ npm start
   1. [**Where we left off**](http://plnkr.co/edit/3XHWiMkBnsjXwj4dCnQj) from last session, 8/31/16
 1. [Beer Details page](https://plnkr.co/edit/NbIKgUr3DUYcEkdxMoJG?p=preview)
   1. [**Where we left off**](http://plnkr.co/edit/6wo2bqT5HKzS909eFQIN?p=preview) from last session 9/7/16
+  2. [**Where we left off**](http://plnkr.co/edit/EneSNQ) from last session 9/14/16
 1. [Beers Consumed page](http://plnkr.co/edit/jlt1X07HA3bH1ZHg023y)
 1. [Unit Testing](http://plnkr.co/edit/HISA6AhAF6xekPxVr6Um)
 
