@@ -19,7 +19,7 @@ npm start
 1. [Beer Details page](https://plnkr.co/edit/NbIKgUr3DUYcEkdxMoJG?p=preview)
 1. [Beers Consumed page](http://plnkr.co/edit/jlt1X07HA3bH1ZHg023y)
   1. [**Where we left off**](http://plnkr.co/edit/qn3mOY) from last session 9/21/2016
-1. [Unit Testing](http://plnkr.co/edit/HISA6AhAF6xekPxVr6Um)
+1. [Unit Testing](http://plnkr.co/edit/1azhzBV1bZyHeKupWFc0)
 
 ## Angular 2 style guide [here](https://angular.io/docs/ts/latest/guide/style-guide.html)
 
