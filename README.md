@@ -14,11 +14,11 @@ npm start
 ## Sessions
 
 1. [Hello World](http://plnkr.co/edit/3N9iW2StVXkgCwD3jrP1?p=preview) and creating [The Shell](http://plnkr.co/edit/ActPLt8EJBkMH1sUtZDy)
+  1. [**Where we left off** 10-5](http://plnkr.co/edit/qNBFJUQEXnQurMDDrfyI)
 1. [Home page](http://plnkr.co/edit/p98RQpH8lJupBS2ESRbO?p=preview)
 1. [Search page](http://plnkr.co/edit/x1tEM2y1txuM1VkzkjEr?p=preview)
 1. [Beer Details page](https://plnkr.co/edit/m6T7ZMVs7CLXIbuz1tt3?p=preview)
 1. [Beers Consumed page](http://plnkr.co/edit/jlt1X07HA3bH1ZHg023y)
-  1. [**Where we left off**](http://plnkr.co/edit/qn3mOY) from last session 9/21/2016
 1. [Unit Testing](http://plnkr.co/edit/1azhzBV1bZyHeKupWFc0)
 
 ## Angular 2 style guide [here](https://angular.io/docs/ts/latest/guide/style-guide.html)
