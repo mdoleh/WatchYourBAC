@@ -12,11 +12,11 @@ npm start
 ```
 
 ## Sessions
+[**Where we left off 11/2/16**](http://plnkr.co/edit/DpmHnvG9IXkAlPlmKbdZ)
 
 1. [Hello World](http://plnkr.co/edit/3N9iW2StVXkgCwD3jrP1?p=preview) and creating [The Shell](http://plnkr.co/edit/ActPLt8EJBkMH1sUtZDy)
 1. [Home page](http://plnkr.co/edit/p98RQpH8lJupBS2ESRbO?p=preview)
 1. [Search page](http://plnkr.co/edit/x1tEM2y1txuM1VkzkjEr?p=preview)
-  1. [**Where we left off**](http://plnkr.co/edit/QR2JShr7Asa3m9O9HfJF)
 1. [Beer Details page](https://plnkr.co/edit/m6T7ZMVs7CLXIbuz1tt3?p=preview)
 1. [Beers Consumed page](http://plnkr.co/edit/jlt1X07HA3bH1ZHg023y)
 1. [Unit Testing](http://plnkr.co/edit/1azhzBV1bZyHeKupWFc0)
