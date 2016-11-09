@@ -12,7 +12,7 @@ npm start
 ```
 
 ## Sessions
-[**Where we left off 11/2/16**](http://plnkr.co/edit/DpmHnvG9IXkAlPlmKbdZ)
+[**Where we left off 11/9/16**](http://plnkr.co/edit/ffrdEuqiXnwqhmLALY3I)
 
 1. [Hello World](http://plnkr.co/edit/3N9iW2StVXkgCwD3jrP1?p=preview) and creating [The Shell](http://plnkr.co/edit/ActPLt8EJBkMH1sUtZDy)
 1. [Home page](http://plnkr.co/edit/p98RQpH8lJupBS2ESRbO?p=preview)
